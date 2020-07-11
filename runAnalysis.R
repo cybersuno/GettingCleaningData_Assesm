@@ -1,3 +1,4 @@
 source("tidyDataset.R")
 
-tidyDataset(FALSE)
+df<-tidyDataset(FALSE)
+meansSummary(df)
