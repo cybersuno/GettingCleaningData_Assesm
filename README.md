@@ -13,10 +13,13 @@ The present document is aimed to document the steps followed to build a tidy dat
 The description of the dataset can be found on the page for the 
 dataset called [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) in the _UC Irvine Machine Learning Repository_
 
+# Run the analysis
+To run the analysis, the script runAnalysis.R performs the analysis.
+
 # Tidy Dataset
 ## Instruction List
 The dataset is obtained in three major steps:
-- Download raw data
+- Download raw data (if desired)
 - Compose base dataset
 - Tidying of the dataset
 
@@ -343,7 +346,7 @@ related to frequency (Fast fourier transform)
 A second dataset is based on the previous one. It has all the averages for the previous.
 To run the dataset, run the script:
 
-    meansSummary()
+    meansSummary(df)
 
 ## Load dataset
 The dataset is performed through a new function: meansSummary

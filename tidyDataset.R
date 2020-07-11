@@ -71,9 +71,12 @@ composeDataset <- function () {
     merge(dfdata,dfActivities,by.x="ActivityCode",by.y="ActivityCode")
 }
 
-tidyDataset <- function() {
+tidyDataset <- function(downloadData) {
     #first step: download files and unzip
-    getRawData()
+    if(downloadData) {
+        getRawData()
+    }
+    
     
     #second step: get the different dataframes and generate an unique one
     df<-composeDataset()
@@ -110,7 +113,7 @@ tidyDataset <- function() {
     df
 }
 
-meansSummary <- function() {
+meansSummary <- function(df) {
     #REturns a dataset with a summarize by ActivityLabel and SubjectCode
     df %>%  group_by(ActivityLabel,SubjectCode) %>% summarize(
         Average_For_Time_BodyAcc_Mean_X=mean(Time_BodyAcc_Mean_X), 
